@@ -30,6 +30,10 @@ ul {
 img {
   width: 100%;
 }
+h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
 h4 {
   color: #00ed82;
   font-size: 13px;
@@ -53,10 +57,26 @@ h4 {
 .btn-cta:hover {
   opacity: 0.8;
 }
+.btn-outline {
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-outline:hover {
+  color: #fff;
+  border-color: #ccc;
+}
 .legal-text {
   font-size: 10px;
   color: #ccc;
   margin-top: 20px;
+}
+.sub-link {
+  display: block;
+  color: #ccc;
+  text-decoration: underline;
+  margin-top: 5px;
+  font-size: 12px;
 }
 /* Header */
 .header {
@@ -111,6 +131,13 @@ h4 {
     #08141f 100%
   );
 }
+.sub-header > div:last-of-type {
+  justify-self: end;
+  align-self: end;
+}
+.sub-header > div:last-of-type .sub-link {
+  text-align: center;
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -120,5 +147,24 @@ h4 {
   .header .header-content {
     text-align: center;
     padding: 0 20px;
+  }
+  .header .header-text-1 {
+    margin-bottom: 40px;
+  }
+  .header .header-text-2 {
+    display: none;
+  }
+  .sub-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  .sub-header img {
+    width: 250px;
+    margin: auto;
+  }
+  .sub-header > div:last-of-type {
+    justify-self: center;
+    align-self: center;
   }
 }
